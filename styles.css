@@ -312,7 +312,7 @@ select {
 .hero-copy {
   align-self: center;
   width: min(100% - 2rem, 560px);
-  margin-left: max(1rem, calc((100vw - var(--max)) / 2));
+  margin-left: max(1rem, calc((100vw - var(--max)) / 2 - 9rem));
   padding: clamp(3rem, 7vw, 6rem) 0;
 }
 
