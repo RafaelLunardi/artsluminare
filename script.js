@@ -54,9 +54,9 @@ if (contactForm) {
     const model = contactForm.querySelector("#modelo")?.value || "um amigurumi";
     const message =
       contactForm.querySelector("#mensagem")?.value?.trim() ||
-      "Gostaria de saber mais sobre disponibilidade, cores e prazo.";
+      "Gostaria de saber se esse produto esta disponivel e combinar pagamento e entrega.";
 
-    const text = encodeURIComponent(`Oi! Meu nome e ${name}. Quero fazer uma encomenda: ${model}. ${message}`);
+    const text = encodeURIComponent(`Oi! Meu nome e ${name}. Quero comprar: ${model}. ${message}`);
     window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank", "noopener");
   });
 }

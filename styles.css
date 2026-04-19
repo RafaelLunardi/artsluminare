@@ -456,11 +456,11 @@ h3 {
 
 .countdown-band {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: minmax(260px, 1fr) minmax(390px, auto) auto;
   align-items: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  padding: 1rem;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+  padding: 1.15rem 1.25rem;
   border: 4px solid var(--black);
   border-radius: var(--radius);
   background: var(--white);
@@ -489,15 +489,16 @@ h3 {
 }
 
 .countdown {
-  display: flex;
-  gap: 0.55rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .countdown li {
-  min-width: 78px;
+  min-width: 108px;
   padding: 0.65rem 0.7rem;
   border: 3px solid var(--black);
   border-radius: var(--radius);
@@ -623,7 +624,7 @@ h3 {
   background: var(--mint);
 }
 
-.status.custom {
+.status.ready {
   background: var(--yellow);
 }
 
