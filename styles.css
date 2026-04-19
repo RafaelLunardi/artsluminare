@@ -97,7 +97,6 @@ select {
 .topbar,
 .category-nav,
 .section,
-.countdown-band,
 .story-band,
 .site-footer {
   width: min(calc(100% - 2rem), var(--max));
@@ -454,20 +453,6 @@ h3 {
   line-height: 0.95;
 }
 
-.countdown-band {
-  display: grid;
-  grid-template-columns: minmax(260px, 1fr) minmax(390px, auto) auto;
-  align-items: center;
-  gap: 1.25rem;
-  margin-top: 1.75rem;
-  padding: 1.15rem 1.25rem;
-  border: 4px solid var(--black);
-  border-radius: var(--radius);
-  background: var(--white);
-  box-shadow: 8px 8px 0 var(--black);
-}
-
-.countdown-band span,
 .product-info p,
 .category-tile span {
   display: block;
@@ -475,42 +460,6 @@ h3 {
   font-weight: 1000;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-
-.countdown-band > div > span {
-  color: var(--coral);
-}
-
-.countdown-band > div > strong {
-  display: block;
-  font-family: "Baloo 2", sans-serif;
-  font-size: 2rem;
-  line-height: 1;
-}
-
-.countdown {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.7rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.countdown li {
-  min-width: 108px;
-  padding: 0.65rem 0.7rem;
-  border: 3px solid var(--black);
-  border-radius: var(--radius);
-  text-align: center;
-  background: var(--paper);
-}
-
-.countdown strong {
-  display: block;
-  font-family: "Baloo 2", sans-serif;
-  font-size: 2rem;
-  line-height: 0.9;
 }
 
 .section {
@@ -898,7 +847,6 @@ select:focus-visible {
   .topbar,
   .category-nav,
   .section,
-  .countdown-band,
   .story-band,
   .site-footer {
     width: min(calc(100% - 1rem), var(--max));
@@ -937,7 +885,6 @@ select:focus-visible {
     justify-self: end;
   }
 
-  .countdown-band,
   .section-head,
   .story-band,
   .contact-section,
@@ -991,15 +938,6 @@ select:focus-visible {
 
   .order-badge {
     width: min(70vw, 210px);
-  }
-
-  .countdown {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .countdown li {
-    min-width: 0;
   }
 
   .product-grid,
