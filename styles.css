@@ -95,7 +95,6 @@ select {
 }
 
 .topbar,
-.category-nav,
 .section,
 .story-band,
 .site-footer {
@@ -152,8 +151,7 @@ select {
   gap: 0.2rem;
 }
 
-.main-nav a,
-.category-nav a {
+.main-nav a {
   text-decoration: none;
   font-weight: 900;
   text-transform: uppercase;
@@ -269,34 +267,6 @@ select {
   height: 2px;
   margin: 5px 0;
   background: currentColor;
-}
-
-.category-nav {
-  display: flex;
-  gap: 0.7rem;
-  overflow-x: auto;
-  padding: 0 0 0.9rem;
-  scrollbar-width: none;
-}
-
-.category-nav::-webkit-scrollbar {
-  display: none;
-}
-
-.category-nav a {
-  flex: 0 0 auto;
-  padding: 0.72rem 1rem;
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.1);
-  font-size: 0.76rem;
-  letter-spacing: 0.06em;
-}
-
-.category-nav a:hover,
-.category-nav a:focus-visible {
-  background: var(--yellow);
-  color: var(--black);
-  outline: none;
 }
 
 .hero {
@@ -852,7 +822,6 @@ select:focus-visible {
 
 @media (max-width: 820px) {
   .topbar,
-  .category-nav,
   .section,
   .story-band,
   .site-footer {
@@ -920,11 +889,6 @@ select:focus-visible {
 
   .ticker {
     justify-content: center;
-  }
-
-  .category-nav {
-    flex-wrap: wrap;
-    overflow-x: hidden;
   }
 
   .brand-name {
