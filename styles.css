@@ -22,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -30,6 +31,7 @@ body {
   color: var(--ink);
   background: var(--paper);
   line-height: 1.45;
+  overflow-x: hidden;
 }
 
 body.is-menu-open {
@@ -898,9 +900,18 @@ select:focus-visible {
 }
 
 @media (max-width: 620px) {
-  .ticker span:nth-child(n + 3),
+  .ticker span:nth-child(n + 2),
   .icon-button {
     display: none;
+  }
+
+  .ticker {
+    justify-content: center;
+  }
+
+  .drop-nav {
+    flex-wrap: wrap;
+    overflow-x: hidden;
   }
 
   .brand-name {

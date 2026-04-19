@@ -46,24 +46,6 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
-const countdownTarget = new Date();
-countdownTarget.setDate(countdownTarget.getDate() + 6);
-countdownTarget.setHours(20, 0, 0, 0);
-
-function updateCountdown() {
-  const diff = Math.max(countdownTarget.getTime() - Date.now(), 0);
-  const days = Math.floor(diff / 86400000);
-  const hours = Math.floor((diff % 86400000) / 3600000);
-  const minutes = Math.floor((diff % 3600000) / 60000);
-
-  document.querySelector('[data-count="days"]').textContent = String(days).padStart(2, "0");
-  document.querySelector('[data-count="hours"]').textContent = String(hours).padStart(2, "0");
-  document.querySelector('[data-count="minutes"]').textContent = String(minutes).padStart(2, "0");
-}
-
-updateCountdown();
-window.setInterval(updateCountdown, 60000);
-
 if (contactForm) {
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -74,7 +56,7 @@ if (contactForm) {
       contactForm.querySelector("#mensagem")?.value?.trim() ||
       "Gostaria de saber mais sobre disponibilidade, cores e prazo.";
 
-    const text = encodeURIComponent(`Oi! Meu nome e ${name}. Quero reservar: ${model}. ${message}`);
+    const text = encodeURIComponent(`Oi! Meu nome e ${name}. Quero fazer uma encomenda: ${model}. ${message}`);
     window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank", "noopener");
   });
 }
