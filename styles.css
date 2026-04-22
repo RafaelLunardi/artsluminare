@@ -70,21 +70,6 @@ select {
   top: 1rem;
 }
 
-.ticker {
-  display: flex;
-  justify-content: center;
-  gap: clamp(1rem, 4vw, 4rem);
-  overflow: hidden;
-  padding: 0.62rem 1rem;
-  background: var(--yellow);
-  color: var(--black);
-  font-size: 0.78rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  white-space: nowrap;
-}
-
 .site-header {
   position: sticky;
   top: 0;
@@ -177,78 +162,36 @@ select {
   gap: 0.5rem;
 }
 
-.icon-button,
-.cart-button {
-  min-width: 44px;
-  height: 44px;
-  display: inline-grid;
-  place-items: center;
-  border: 2px solid rgba(255, 255, 255, 0.24);
+.market-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.72rem 0.95rem;
+  border: 2px solid var(--mint);
   border-radius: var(--radius);
+  background: var(--mint);
+  color: var(--black);
   text-decoration: none;
-  font-size: 1.25rem;
-  font-weight: 900;
+  font-size: 0.78rem;
+  font-weight: 1000;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: transform 160ms ease, background 160ms ease, color 160ms ease;
 }
 
-.search-icon::before,
-.heart-icon::before,
-.bag-icon::before {
-  content: "";
-  display: block;
+.market-link:hover,
+.market-link:focus-visible {
+  transform: translateY(-2px);
+  background: var(--white);
+  color: var(--black);
+  outline: none;
 }
 
-.search-icon::before {
-  width: 12px;
-  height: 12px;
-  border: 3px solid currentColor;
-  border-radius: 50%;
-  box-shadow: 8px 8px 0 -5px currentColor;
-  transform: rotate(-12deg);
-}
-
-.heart-icon::before {
-  width: 14px;
-  height: 14px;
-  border-right: 3px solid currentColor;
-  border-bottom: 3px solid currentColor;
-  transform: rotate(45deg);
-}
-
-.bag-icon {
-  width: 16px;
-  height: 14px;
-  display: block;
-  border: 3px solid currentColor;
-  border-radius: 2px;
-  position: relative;
-}
-
-.bag-icon::before {
-  position: absolute;
-  left: 3px;
-  top: -8px;
-  width: 8px;
-  height: 7px;
-  border: 3px solid currentColor;
-  border-bottom: 0;
-  border-radius: 8px 8px 0 0;
-}
-
-.cart-button {
-  grid-auto-flow: column;
-  gap: 0.45rem;
-  padding: 0 0.65rem;
-}
-
-.cart-button strong {
-  min-width: 1.35rem;
-  min-height: 1.35rem;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
+.market-link-primary {
+  border-color: var(--yellow);
   background: var(--yellow);
   color: var(--black);
-  font-size: 0.72rem;
 }
 
 .nav-toggle {
@@ -272,7 +215,7 @@ select {
 .hero {
   display: grid;
   grid-template-columns: minmax(420px, 0.92fr) minmax(460px, 1.08fr);
-  min-height: calc(100vh - 130px);
+  min-height: calc(100vh - 74px);
   background:
     linear-gradient(90deg, var(--yellow) 0 47%, transparent 47%),
     repeating-linear-gradient(0deg, rgba(16, 16, 16, 0.045) 0 1px, transparent 1px 42px);
@@ -843,7 +786,7 @@ select:focus-visible {
 
   .main-nav {
     position: fixed;
-    inset: 122px 0 auto 0;
+    inset: 74px 0 auto 0;
     display: none;
     grid-template-columns: 1fr;
     gap: 0;
@@ -887,13 +830,8 @@ select:focus-visible {
 }
 
 @media (max-width: 620px) {
-  .ticker span:nth-child(n + 2),
-  .icon-button {
+  .header-actions .market-link:first-child {
     display: none;
-  }
-
-  .ticker {
-    justify-content: center;
   }
 
   .brand-name {
