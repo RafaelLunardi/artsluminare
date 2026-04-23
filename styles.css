@@ -499,22 +499,29 @@ h3 {
 }
 
 .page-intro .section-head {
-  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+  grid-template-columns: minmax(0, 1.45fr) minmax(220px, 0.55fr);
   align-items: center;
-  margin-bottom: 0.8rem;
+  gap: 1.25rem;
+  margin-bottom: 0.55rem;
 }
 
 .page-intro h1 {
   max-width: none;
-  font-size: clamp(2.6rem, 4.3vw, 4.2rem);
-  line-height: 0.96;
+  font-size: clamp(2.2rem, 3.4vw, 3.35rem);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.page-intro .section-copy {
+  max-width: 28rem;
+  font-size: clamp(0.96rem, 1.05vw, 1.05rem);
 }
 
 .products-hero-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-  margin-top: 0.35rem;
+  margin-top: 0.1rem;
 }
 
 .products-page-section {
