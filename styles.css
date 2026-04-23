@@ -125,23 +125,11 @@ select {
 }
 
 .brand-face {
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  border: 3px solid var(--black);
-  border-radius: 50%;
-  background: var(--yellow);
-  color: var(--black);
-  font-family: "Baloo 2", sans-serif;
-  font-size: 1.05rem;
-  font-weight: 800;
-  box-shadow: 4px 4px 0 var(--coral);
-}
-
-.site-header .brand-face,
-.site-footer .brand-face {
-  border-color: var(--white);
+  width: 58px;
+  height: 58px;
+  display: block;
+  object-fit: contain;
+  flex: 0 0 auto;
 }
 
 .brand-name {
@@ -246,11 +234,6 @@ html[data-theme="dark"] .site-header,
 html[data-theme="dark"] .main-nav {
   background: #080708;
   color: #fff6ea;
-}
-
-html[data-theme="dark"] .site-header .brand-face,
-html[data-theme="dark"] .site-footer .brand-face {
-  border-color: #fff6ea;
 }
 
 html[data-theme="dark"] .nav-toggle {
@@ -953,10 +936,8 @@ select:focus-visible {
   }
 
   .brand-face {
-    width: 32px;
-    height: 32px;
-    border-width: 2px;
-    font-size: 0.78rem;
+    width: 40px;
+    height: 40px;
   }
 
   .brand {
