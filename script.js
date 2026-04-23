@@ -13,7 +13,7 @@ function setTheme(theme) {
   themeToggle?.setAttribute("aria-pressed", String(dark));
   themeToggle?.setAttribute("aria-label", dark ? "Ativar modo claro" : "Ativar modo escuro");
   if (themeToggle) {
-    themeToggle.querySelector("span").textContent = dark ? "☀" : "☾";
+    themeToggle.querySelector("span").textContent = "Tema";
   }
   themeMeta?.setAttribute("content", dark ? "#080708" : "#101010");
   try {
