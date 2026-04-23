@@ -4,6 +4,22 @@ const filterLinks = document.querySelectorAll("[data-filter-link]");
 const year = document.querySelector("#year");
 const navToggle = document.querySelector(".nav-toggle");
 const mainNav = document.querySelector(".main-nav");
+const themeToggle = document.querySelector(".theme-toggle");
+const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+function setTheme(theme) {
+  const dark = theme === "dark";
+  document.documentElement.dataset.theme = dark ? "dark" : "light";
+  themeToggle?.setAttribute("aria-pressed", String(dark));
+  themeToggle?.setAttribute("aria-label", dark ? "Ativar modo claro" : "Ativar modo escuro");
+  if (themeToggle) {
+    themeToggle.querySelector("span").textContent = dark ? "☀" : "☾";
+  }
+  themeMeta?.setAttribute("content", dark ? "#080708" : "#101010");
+  try {
+    localStorage.setItem("artsluminare-theme", dark ? "dark" : "light");
+  } catch {}
+}
 
 function applyFilter(filter) {
   filterButtons.forEach((button) => {
@@ -37,6 +53,15 @@ if (navToggle && mainNav) {
     mainNav.classList.toggle("is-open", open);
     navToggle.setAttribute("aria-expanded", String(open));
     document.body.classList.toggle("is-menu-open", open);
+  });
+}
+
+if (themeToggle) {
+  const savedTheme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+  setTheme(savedTheme);
+  themeToggle.addEventListener("click", () => {
+    const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
   });
 }
 

@@ -10,6 +10,15 @@
     />
     <meta name="theme-color" content="#101010" />
     <link rel="icon" type="image/png" href="./assets/amigurumi-produtos-prontos-hero.png" />
+    <script>
+      (() => {
+        try {
+          if (localStorage.getItem("artsluminare-theme") === "dark") {
+            document.documentElement.dataset.theme = "dark";
+          }
+        } catch {}
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -41,6 +50,9 @@
         </nav>
 
         <div class="header-actions" aria-label="Lojas online">
+          <button class="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+            <span aria-hidden="true">☾</span>
+          </button>
           <a class="market-link market-link-primary" href="#modelos">Ver catalogo</a>
           <a class="market-link" href="#lojas">Comprar</a>
         </div>

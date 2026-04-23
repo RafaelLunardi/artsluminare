@@ -14,6 +14,22 @@
   --shadow: 0 20px 48px rgba(16, 16, 16, 0.16);
   --radius: 8px;
   --max: 1240px;
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --ink: #fff6ea;
+  --paper: #171314;
+  --white: #282123;
+  --yellow: #ffd84d;
+  --coral: #ff8066;
+  --mint: #67dfbf;
+  --blue: #7aa0ff;
+  --pink: #ff9fc7;
+  --muted: #d8c9c1;
+  --line: rgba(255, 246, 234, 0.16);
+  --shadow: 0 20px 48px rgba(0, 0, 0, 0.38);
+  color-scheme: dark;
 }
 
 * {
@@ -34,6 +50,7 @@ body {
   background: var(--paper);
   line-height: 1.45;
   overflow-x: hidden;
+  transition: background 180ms ease, color 180ms ease;
 }
 
 body.is-menu-open {
@@ -170,6 +187,29 @@ select {
   gap: 0.5rem;
 }
 
+.theme-toggle {
+  min-width: 44px;
+  height: 44px;
+  display: inline-grid;
+  place-items: center;
+  border: 2px solid var(--white);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--black);
+  font-size: 1.2rem;
+  font-weight: 1000;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  transform: translateY(-2px);
+  background: var(--yellow);
+  color: var(--black);
+  outline: none;
+}
+
 .market-link {
   min-height: 44px;
   display: inline-flex;
@@ -200,6 +240,63 @@ select {
   border-color: var(--yellow);
   background: var(--yellow);
   color: var(--black);
+}
+
+html[data-theme="dark"] .site-header,
+html[data-theme="dark"] .main-nav {
+  background: #080708;
+  color: #fff6ea;
+}
+
+html[data-theme="dark"] .site-header .brand-face,
+html[data-theme="dark"] .site-footer .brand-face {
+  border-color: #fff6ea;
+}
+
+html[data-theme="dark"] .nav-toggle {
+  border-color: rgba(255, 246, 234, 0.32);
+  color: #fff6ea;
+}
+
+html[data-theme="dark"] .theme-toggle {
+  border-color: var(--yellow);
+  background: var(--yellow);
+  color: var(--black);
+}
+
+html[data-theme="dark"] .hero {
+  background:
+    linear-gradient(90deg, #302716 0 47%, transparent 47%),
+    repeating-linear-gradient(0deg, rgba(255, 246, 234, 0.04) 0 1px, transparent 1px 42px);
+}
+
+html[data-theme="dark"] .hero-stage {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(255, 159, 199, 0.55) 0 12%, transparent 12.5%),
+    radial-gradient(circle at 18% 78%, rgba(103, 223, 191, 0.5) 0 12%, transparent 12.5%),
+    linear-gradient(135deg, #211b1d 0%, #342718 100%);
+}
+
+html[data-theme="dark"] .filter-chip,
+html[data-theme="dark"] .product-link,
+html[data-theme="dark"] .button-light {
+  color: var(--ink);
+}
+
+html[data-theme="dark"] .button-dark {
+  color: #fff6ea;
+}
+
+html[data-theme="dark"] .filter-chip.is-active {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+html[data-theme="dark"] .product-link,
+html[data-theme="dark"] .filter-chip,
+html[data-theme="dark"] .store-card {
+  border-color: rgba(255, 246, 234, 0.26);
+  box-shadow: 7px 7px 0 rgba(255, 246, 234, 0.1);
 }
 
 .nav-toggle {
@@ -843,7 +940,7 @@ select:focus-visible {
 }
 
 @media (max-width: 620px) {
-  .header-actions .market-link:first-child {
+  .header-actions .market-link-primary {
     display: none;
   }
 
