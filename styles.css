@@ -285,6 +285,11 @@ html[data-theme="dark"] .filter-chip.is-active {
   color: var(--black);
 }
 
+html[data-theme="dark"] .products-sidebar-card {
+  border-color: rgba(255, 246, 234, 0.26);
+  box-shadow: 7px 7px 0 rgba(255, 246, 234, 0.1);
+}
+
 html[data-theme="dark"] .product-link,
 html[data-theme="dark"] .filter-chip,
 html[data-theme="dark"] .store-card {
@@ -497,8 +502,61 @@ h3 {
   grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
 }
 
+.products-hero-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+
 .products-page-section {
   padding-top: 2rem;
+}
+
+.products-layout {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.28fr) minmax(0, 0.72fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.products-sidebar {
+  position: sticky;
+  top: 108px;
+}
+
+.products-sidebar-card {
+  display: grid;
+  gap: 1rem;
+  padding: 1.2rem;
+  border: 4px solid var(--black);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+.products-sidebar-card h2 {
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
+}
+
+.products-sidebar-filters {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.products-sidebar-filters .filter-chip {
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.products-content {
+  min-width: 0;
+}
+
+.products-content-head {
+  grid-template-columns: 1fr;
+  align-items: end;
 }
 
 .products-page-grid {
@@ -881,6 +939,23 @@ select:focus-visible {
     grid-template-columns: 1fr;
   }
 
+  .products-hero-cards,
+  .products-page-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .products-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .products-sidebar {
+    position: static;
+  }
+
+  .products-sidebar-filters {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .sales-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1214,6 +1289,22 @@ select:focus-visible {
     width: 100%;
     padding: 1rem;
     border-top-width: 3px;
+  }
+
+  .products-hero-cards,
+  .products-sidebar-filters,
+  .products-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .products-sidebar-card {
+    padding: 1rem;
+    border-width: 3px;
+    box-shadow: none;
+  }
+
+  .products-content-head {
+    margin-bottom: 0.9rem;
   }
 
   html[data-theme="dark"] .hero {
