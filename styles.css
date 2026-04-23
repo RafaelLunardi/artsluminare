@@ -500,13 +500,21 @@ h3 {
 
 .page-intro .section-head {
   grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.page-intro h1 {
+  max-width: none;
+  font-size: clamp(2.6rem, 4.3vw, 4.2rem);
+  line-height: 0.96;
 }
 
 .products-hero-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-  margin-top: 1.6rem;
+  margin-top: 0.35rem;
 }
 
 .products-page-section {
