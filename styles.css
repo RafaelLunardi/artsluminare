@@ -190,6 +190,16 @@ select {
   transition: transform 160ms ease, background 160ms ease, color 160ms ease;
 }
 
+.theme-toggle span::before {
+  content: "☾";
+  display: block;
+  line-height: 1;
+}
+
+html[data-theme="dark"] .theme-toggle span::before {
+  content: "☀";
+}
+
 .theme-toggle:hover,
 .theme-toggle:focus-visible {
   transform: translateY(-2px);
@@ -958,12 +968,10 @@ select:focus-visible {
   }
 
   .theme-toggle {
-    min-width: 50px;
+    min-width: 42px;
     height: 42px;
-    padding: 0 0.55rem;
-    font-size: 0.68rem;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
+    padding: 0;
+    font-size: 1.05rem;
   }
 
   .hero {

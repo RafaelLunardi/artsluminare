@@ -12,9 +12,6 @@ function setTheme(theme) {
   document.documentElement.dataset.theme = dark ? "dark" : "light";
   themeToggle?.setAttribute("aria-pressed", String(dark));
   themeToggle?.setAttribute("aria-label", dark ? "Ativar modo claro" : "Ativar modo escuro");
-  if (themeToggle) {
-    themeToggle.querySelector("span").textContent = "Tema";
-  }
   themeMeta?.setAttribute("content", dark ? "#080708" : "#101010");
   try {
     localStorage.setItem("artsluminare-theme", dark ? "dark" : "light");
