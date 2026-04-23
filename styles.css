@@ -489,6 +489,22 @@ h3 {
   grid-template-columns: 1fr;
 }
 
+.page-intro {
+  padding-bottom: 0;
+}
+
+.page-intro .section-head {
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+}
+
+.products-page-section {
+  padding-top: 2rem;
+}
+
+.products-page-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -859,6 +875,10 @@ select:focus-visible {
   .product-grid,
   .category-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page-intro .section-head {
+    grid-template-columns: 1fr;
   }
 
   .sales-grid {

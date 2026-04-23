@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ArtsLuminare</title>
+    <title>Produtos | ArtsLuminare</title>
     <meta
       name="description"
-      content="ArtsLuminare vende amigurumis prontos para envio e modelos sob encomenda pelo Mercado Livre e Elo7."
+      content="Lista de produtos da ArtsLuminare com filtros por categoria para amigurumis prontos e sob encomenda."
     />
     <meta name="theme-color" content="#101010" />
     <link rel="icon" type="image/png" href="./assets/favicon-al-transparent.png?v=2" />
@@ -33,7 +33,7 @@
 
     <header class="site-header" id="topo">
       <div class="topbar">
-        <a class="brand" href="./index.html#inicio" aria-label="ArtsLuminare, voltar ao topo">
+        <a class="brand" href="./index.html#inicio" aria-label="ArtsLuminare, voltar ao inicio">
           <img class="brand-face" src="./assets/artsluminare-logo.png?v=2" alt="" aria-hidden="true" />
           <span class="brand-name">ArtsLuminare</span>
         </a>
@@ -46,53 +46,38 @@
 
         <nav class="main-nav" aria-label="Menu principal">
           <a href="./produtos.html">Produtos</a>
-          <a href="#vendas">Vendas</a>
-          <a href="#lojas">Lojas</a>
+          <a href="./index.html#vendas">Vendas</a>
+          <a href="./index.html#lojas">Lojas</a>
         </nav>
 
         <div class="header-actions" aria-label="Lojas online">
           <button class="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
             <span aria-hidden="true"></span>
           </button>
-          <a class="market-link market-link-primary" href="./produtos.html">Ver catalogo</a>
-          <a class="market-link" href="#lojas">Comprar</a>
+          <a class="market-link market-link-primary" href="./index.html#lojas">Mercado Livre</a>
+          <a class="market-link" href="./index.html#lojas">Comprar</a>
         </div>
       </div>
-
     </header>
 
     <main id="conteudo">
-      <section class="hero" id="inicio">
-        <div class="hero-copy">
-          <p class="eyebrow">feito a mao / pronta entrega e encomenda</p>
-          <h1>Amigurumis fofos para comprar online.</h1>
-          <p>
-            Produtos prontos para envio e modelos sob encomenda do catalogo,
-            vendidos com links do Mercado Livre e Elo7.
+      <section class="section page-intro">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">catalogo completo</p>
+            <h1>Produtos da ArtsLuminare.</h1>
+          </div>
+          <p class="section-copy">
+            Encontre amigurumis prontos para envio e modelos sob encomenda, com filtros por tipo de produto.
           </p>
-          <div class="hero-actions">
-            <a class="button button-dark" href="./produtos.html">Ver produtos</a>
-            <a class="button button-light" href="#lojas">Ver lojas</a>
-          </div>
-        </div>
-
-        <div class="hero-stage" aria-label="Vitrine principal de amigurumis">
-          <img
-            src="./assets/amigurumi-produtos-prontos-hero.png"
-            alt="Colecao de amigurumis em display colorido de loja"
-          />
-          <div class="order-badge">
-            <span>Compra segura</span>
-            <strong>Mercado Livre + Elo7</strong>
-          </div>
         </div>
       </section>
 
-      <section class="section shop-section" id="modelos">
+      <section class="section shop-section products-page-section">
         <div class="section-head">
           <div>
-            <p class="eyebrow">catalogo de amigurumis</p>
-            <h2>Produtos prontos e modelos sob encomenda</h2>
+            <p class="eyebrow">lista de produtos</p>
+            <h2>Filtre por categoria</h2>
           </div>
           <div class="filter-bar" role="toolbar" aria-label="Filtros de produtos">
             <button class="filter-chip is-active" type="button" data-filter="todos" aria-pressed="true">
@@ -110,12 +95,15 @@
             <button class="filter-chip" type="button" data-filter="kits" aria-pressed="false">
               Kits
             </button>
+            <button class="filter-chip" type="button" data-filter="decoracao" aria-pressed="false">
+              Decoracao
+            </button>
           </div>
         </div>
 
-        <div class="product-grid">
+        <div class="product-grid products-page-grid">
           <article class="product-card" data-category="bichinhos">
-            <a class="product-link" href="#lojas">
+            <a class="product-link" href="./index.html#lojas">
               <span class="status ready">Pronta entrega</span>
               <img src="./assets/hero-bunny.jpg" alt="Coelhinho amigurumi artesanal" />
               <div class="product-info">
@@ -128,7 +116,7 @@
           </article>
 
           <article class="product-card" data-category="bonecas">
-            <a class="product-link" href="#lojas">
+            <a class="product-link" href="./index.html#lojas">
               <span class="status order">Sob encomenda</span>
               <img src="./assets/amigurumi-doll.jpg" alt="Boneca amigurumi artesanal" />
               <div class="product-info">
@@ -141,7 +129,7 @@
           </article>
 
           <article class="product-card" data-category="kits">
-            <a class="product-link" href="#lojas">
+            <a class="product-link" href="./index.html#lojas">
               <span class="status ready">Kit pronto</span>
               <img src="./assets/amigurumi-produtos-prontos-hero.png" alt="Grupo de amigurumis prontos para venda" />
               <div class="product-info">
@@ -154,7 +142,7 @@
           </article>
 
           <article class="product-card" data-category="mini">
-            <a class="product-link" href="#lojas">
+            <a class="product-link" href="./index.html#lojas">
               <span class="status ready">Pronta entrega</span>
               <img src="./assets/craft-tools.jpg" alt="Fios de croche para mini amigurumis" />
               <div class="product-info">
@@ -165,51 +153,9 @@
               </div>
             </a>
           </article>
-        </div>
-      </section>
 
-      <section class="section category-section" id="busca">
-        <div class="section-head compact">
-          <div>
-            <p class="eyebrow">compre por categoria</p>
-            <h2>Encontre pelo tipo de presente</h2>
-          </div>
-        </div>
-
-        <div class="category-grid">
-          <a class="category-tile yellow" href="./produtos.html?categoria=bichinhos" data-filter-link="bichinhos">
-            <span>Bichinhos fofos</span>
-            <strong>Coelhos, ursinhos e mascotes</strong>
-          </a>
-          <a class="category-tile mint" href="./produtos.html?categoria=bonecas" data-filter-link="bonecas">
-            <span>Bonecas afetivas</span>
-            <strong>Modelos sob encomenda</strong>
-          </a>
-          <a class="category-tile coral" href="./produtos.html?categoria=kits" data-filter-link="kits">
-            <span>Kits presente</span>
-            <strong>Para datas especiais</strong>
-          </a>
-          <a class="category-tile blue" href="./produtos.html?categoria=decoracao" data-filter-link="decoracao">
-            <span>Decoracao</span>
-            <strong>Nichos, quartos e festas</strong>
-          </a>
-        </div>
-      </section>
-
-      <section class="section shop-section" id="inspiracoes">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">mais opcoes</p>
-            <h2>Produtos para pronta entrega e encomenda</h2>
-          </div>
-          <p class="section-copy">
-            Os cards podem receber links individuais do Mercado Livre ou Elo7 quando os anuncios estiverem ativos.
-          </p>
-        </div>
-
-        <div class="product-grid ideas-grid">
           <article class="product-card" data-category="decoracao">
-            <a class="product-link" href="#lojas">
+            <a class="product-link" href="./index.html#lojas">
               <span class="status quote">Consultar</span>
               <img src="./assets/amigurumi-produtos-prontos-hero.png" alt="Amigurumis coloridos para decoracao" />
               <div class="product-info">
@@ -222,7 +168,7 @@
           </article>
 
           <article class="product-card" data-category="bichinhos">
-            <a class="product-link" href="#lojas">
+            <a class="product-link" href="./index.html#lojas">
               <span class="status order">Sob encomenda</span>
               <img src="./assets/hero-bunny.jpg" alt="Amigurumi em tons suaves" />
               <div class="product-info">
@@ -234,8 +180,8 @@
             </a>
           </article>
 
-          <article class="product-card" id="favoritos" data-category="kits">
-            <a class="product-link" href="#lojas">
+          <article class="product-card" data-category="kits">
+            <a class="product-link" href="./index.html#lojas">
               <span class="status quote">Consultar</span>
               <img src="./assets/craft-tools.jpg" alt="Materiais de croche coloridos" />
               <div class="product-info">
@@ -249,58 +195,12 @@
         </div>
       </section>
 
-      <section class="story-band">
-        <div>
-          <p class="eyebrow">amigurumis artesanais</p>
-          <h2>Amigurumis feitos a mao com o jeitinho da ArtsLuminare.</h2>
-        </div>
-        <p>
-          Cada peca nasce aqui na ArtsLuminare com carinho, cor e acabamento artesanal,
-          entre modelos prontos para envio e opcoes sob encomenda.
-        </p>
-      </section>
-
-      <section class="section sales-section" id="vendas">
-        <div class="section-head">
-          <div>
-          <p class="eyebrow">produtos e vendas</p>
-          <h2>Compra simples, segura e pronta para escalar.</h2>
-          </div>
-          <p class="section-copy">
-            Aqui voce conhece a colecao da ArtsLuminare e segue para comprar online pelo Mercado Livre ou Elo7.
-          </p>
-        </div>
-
-        <div class="sales-grid">
-          <article class="sales-card yellow">
-            <span>01</span>
-            <h3>Pronta entrega</h3>
-            <p>Pecas finalizadas ganham destaque para quem quer comprar e receber mais rapido.</p>
-          </article>
-          <article class="sales-card mint">
-            <span>02</span>
-            <h3>Sob encomenda</h3>
-            <p>Modelos do catalogo podem ser vendidos com prazo informado no anuncio do marketplace.</p>
-          </article>
-          <article class="sales-card coral">
-            <span>03</span>
-            <h3>Presentes prontos para encantar</h3>
-            <p>Kits, lembrancas e pecas individuais podem ser vendidos como presentes completos.</p>
-          </article>
-          <article class="sales-card blue">
-            <span>04</span>
-            <h3>Mercado Livre e Elo7</h3>
-            <p>Os botoes levam para plataformas de compra com pagamento, dados do pedido e envio.</p>
-          </article>
-        </div>
-      </section>
-
       <section class="section store-section" id="lojas">
         <div class="contact-copy">
-          <p class="eyebrow">lojas online</p>
-          <h2>Compre pelo Mercado Livre ou Elo7.</h2>
+          <p class="eyebrow">comprar online</p>
+          <h2>Escolha a plataforma de compra.</h2>
           <p>
-            Use estes cards como destino geral agora; depois, cada produto pode receber seu link direto.
+            Os produtos podem levar para Mercado Livre ou Elo7, conforme o anuncio ativo de cada item.
           </p>
         </div>
 

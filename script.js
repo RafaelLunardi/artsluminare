@@ -29,6 +29,14 @@ function applyFilter(filter) {
     const visible = filter === "todos" || card.dataset.category === filter;
     card.hidden = !visible;
   });
+
+  const url = new URL(window.location.href);
+  if (filter === "todos") {
+    url.searchParams.delete("categoria");
+  } else {
+    url.searchParams.set("categoria", filter);
+  }
+  window.history.replaceState({}, "", url);
 }
 
 filterButtons.forEach((button) => {
@@ -60,6 +68,11 @@ if (themeToggle) {
     const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
     setTheme(nextTheme);
   });
+}
+
+const initialFilter = new URLSearchParams(window.location.search).get("categoria");
+if (initialFilter && [...filterButtons].some((button) => button.dataset.filter === initialFilter)) {
+  applyFilter(initialFilter);
 }
 
 if (year) {
