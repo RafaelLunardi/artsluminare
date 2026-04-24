@@ -1118,8 +1118,7 @@ select:focus-visible {
   }
 
   .hero-copy p:not(.eyebrow) {
-    font-size: 0.92rem;
-    line-height: 1.38;
+    display: none;
   }
 
   .hero-actions {
@@ -1176,12 +1175,7 @@ select:focus-visible {
   }
 
   .order-badge {
-    right: 1rem;
-    bottom: 0.5rem;
-    width: min(50vw, 152px);
-    padding: 0.54rem;
-    border-width: 3px;
-    box-shadow: 4px 4px 0 var(--black);
+    display: none;
   }
 
   .order-badge strong {
@@ -1214,7 +1208,7 @@ select:focus-visible {
   }
 
   .product-info h3 {
-    font-size: 1.14rem;
+    font-size: 1.02rem;
     line-height: 0.98;
   }
 
@@ -1337,8 +1331,7 @@ select:focus-visible {
   .products-sidebar-card .section-copy,
   .contact-copy p,
   .story-band p {
-    font-size: 0.9rem;
-    line-height: 1.35;
+    display: none;
   }
 
   .page-intro .section-copy,
@@ -1356,6 +1349,14 @@ select:focus-visible {
     padding: 0.85rem;
     border-width: 3px;
     box-shadow: none;
+  }
+
+  .products-sidebar-card h2,
+  .products-content-head .eyebrow,
+  .contact-copy .eyebrow,
+  .site-footer p,
+  .eyebrow {
+    display: none;
   }
 
   .products-content-head {
