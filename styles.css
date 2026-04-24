@@ -1411,6 +1411,8 @@ select:focus-visible {
   }
 
   .products-sidebar-filters .filter-chip {
+    appearance: none !important;
+    -webkit-appearance: none !important;
     min-height: 40px;
     justify-content: center;
     text-align: center;
@@ -1423,21 +1425,31 @@ select:focus-visible {
     color: var(--black) !important;
     -webkit-text-fill-color: var(--black) !important;
     border-color: var(--black) !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
   }
 
   .products-sidebar-filters .filter-chip.is-active,
-  .products-sidebar-filters .filter-chip[aria-pressed="true"] {
+  .products-sidebar-filters .filter-chip[aria-pressed="true"],
+  .products-sidebar-filters .filter-chip:active,
+  .products-sidebar-filters .filter-chip:focus-visible {
     background: var(--yellow) !important;
     color: var(--black) !important;
     -webkit-text-fill-color: var(--black) !important;
     border-color: var(--black) !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
   }
 
   html[data-theme="dark"] .products-sidebar-filters .filter-chip,
   html[data-theme="dark"] .products-sidebar-filters .filter-chip.is-active,
-  html[data-theme="dark"] .products-sidebar-filters .filter-chip[aria-pressed="true"] {
+  html[data-theme="dark"] .products-sidebar-filters .filter-chip[aria-pressed="true"],
+  html[data-theme="dark"] .products-sidebar-filters .filter-chip:active,
+  html[data-theme="dark"] .products-sidebar-filters .filter-chip:focus-visible {
     color: var(--black) !important;
     -webkit-text-fill-color: var(--black) !important;
+    opacity: 1 !important;
   }
 
   .products-sidebar-card h2,
