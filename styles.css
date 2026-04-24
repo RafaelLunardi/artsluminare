@@ -1121,6 +1121,10 @@ select:focus-visible {
     display: none;
   }
 
+  .hero-copy .eyebrow {
+    display: none;
+  }
+
   .hero-actions {
     gap: 0.45rem;
     margin-top: 0.85rem;
