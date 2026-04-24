@@ -555,6 +555,10 @@ h3 {
   margin-top: 0.1rem;
 }
 
+.products-hero-cards .category-tile {
+  justify-content: center;
+}
+
 .products-page-section {
   padding-top: 2rem;
 }
