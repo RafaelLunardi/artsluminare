@@ -97,7 +97,15 @@
               <p class="section-copy">
                 Use os filtros para navegar pela coleção e encontrar mais rápido o tipo de amigurumi que você quer.
               </p>
-              <div class="products-sidebar-filters" role="toolbar" aria-label="Filtros de produtos">
+              <button
+                class="products-filter-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="products-filters"
+              >
+                Filtros
+              </button>
+              <div class="products-sidebar-filters" id="products-filters" role="toolbar" aria-label="Filtros de produtos">
                 <button class="filter-chip is-active" type="button" data-filter="todos" aria-pressed="true">
                   Todos
                 </button>

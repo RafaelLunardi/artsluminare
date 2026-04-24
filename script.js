@@ -6,6 +6,14 @@ const navToggle = document.querySelector(".nav-toggle");
 const mainNav = document.querySelector(".main-nav");
 const themeToggle = document.querySelector(".theme-toggle");
 const themeMeta = document.querySelector('meta[name="theme-color"]');
+const productsFilterToggle = document.querySelector(".products-filter-toggle");
+const productsFilterPanel = document.querySelector("#products-filters");
+
+function setProductsFilterOpen(open) {
+  if (!productsFilterToggle || !productsFilterPanel) return;
+  productsFilterToggle.setAttribute("aria-expanded", String(open));
+  productsFilterPanel.classList.toggle("is-open", open);
+}
 
 function setTheme(theme) {
   const dark = theme === "dark";
@@ -40,7 +48,12 @@ function applyFilter(filter) {
 }
 
 filterButtons.forEach((button) => {
-  button.addEventListener("click", () => applyFilter(button.dataset.filter));
+  button.addEventListener("click", () => {
+    applyFilter(button.dataset.filter);
+    if (window.matchMedia("(max-width: 620px)").matches) {
+      setProductsFilterOpen(false);
+    }
+  });
 });
 
 filterLinks.forEach((link) => {
@@ -67,6 +80,14 @@ if (themeToggle) {
   themeToggle.addEventListener("click", () => {
     const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
     setTheme(nextTheme);
+  });
+}
+
+if (productsFilterToggle && productsFilterPanel) {
+  setProductsFilterOpen(false);
+  productsFilterToggle.addEventListener("click", () => {
+    const open = productsFilterToggle.getAttribute("aria-expanded") !== "true";
+    setProductsFilterOpen(open);
   });
 }
 

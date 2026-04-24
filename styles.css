@@ -568,6 +568,10 @@ h3 {
   gap: 0.55rem;
 }
 
+.products-filter-toggle {
+  display: none;
+}
+
 .products-sidebar-filters .filter-chip {
   width: 100%;
   justify-content: flex-start;
@@ -1378,9 +1382,32 @@ select:focus-visible {
     box-shadow: none;
   }
 
+  .products-filter-toggle {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.72rem 0.9rem;
+    border: 3px solid var(--black);
+    border-radius: 10px;
+    background: var(--yellow);
+    color: var(--black);
+    font-size: 0.84rem;
+    font-weight: 1000;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 0 var(--black);
+  }
+
   .products-sidebar-filters {
+    display: none;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.5rem;
+    margin-top: 0.6rem;
+  }
+
+  .products-sidebar-filters.is-open {
+    display: grid;
   }
 
   .products-sidebar-filters .filter-chip {
