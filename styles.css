@@ -144,20 +144,20 @@ select {
 
 .pink-i {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
   font-style: normal;
   line-height: 1;
-  width: 0.36em;
-  text-align: center;
+  width: 0.32em;
 }
 
 .pink-i::after {
   content: "";
   position: absolute;
   left: 50%;
-  top: -0.08em;
-  width: 0.23em;
-  height: 0.23em;
+  top: -0.1em;
+  width: 0.21em;
+  height: 0.21em;
   border-radius: 50%;
   background: var(--pink);
   transform: translateX(-50%);
