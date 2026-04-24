@@ -1372,9 +1372,27 @@ select:focus-visible {
 
   .products-sidebar-card {
     gap: 0.7rem;
-    padding: 0.85rem;
-    border-width: 3px;
+    padding: 0;
+    border-width: 0;
+    background: transparent;
     box-shadow: none;
+  }
+
+  .products-sidebar-filters {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .products-sidebar-filters .filter-chip {
+    min-height: 40px;
+    justify-content: center;
+    text-align: center;
+    padding: 0.56rem 0.4rem;
+    font-size: 0.68rem;
+    line-height: 1;
+    border-width: 2px;
+    border-radius: 10px;
+    background: var(--white);
   }
 
   .products-sidebar-card h2,
