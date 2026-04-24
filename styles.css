@@ -1399,6 +1399,13 @@ select:focus-visible {
     box-shadow: 3px 3px 0 var(--black);
   }
 
+  html[data-theme="dark"] .products-filter-toggle {
+    background: var(--yellow);
+    color: var(--black);
+    border-color: rgba(255, 246, 234, 0.2);
+    box-shadow: 3px 3px 0 rgba(255, 246, 234, 0.12);
+  }
+
   .products-sidebar-filters {
     display: none !important;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1450,6 +1457,20 @@ select:focus-visible {
     color: var(--black) !important;
     -webkit-text-fill-color: var(--black) !important;
     opacity: 1 !important;
+  }
+
+  html[data-theme="dark"] .products-sidebar-filters .filter-chip {
+    background: #fff6ea !important;
+    border-color: rgba(255, 246, 234, 0.22) !important;
+    box-shadow: none !important;
+  }
+
+  html[data-theme="dark"] .products-sidebar-filters .filter-chip.is-active,
+  html[data-theme="dark"] .products-sidebar-filters .filter-chip[aria-pressed="true"],
+  html[data-theme="dark"] .products-sidebar-filters .filter-chip:active,
+  html[data-theme="dark"] .products-sidebar-filters .filter-chip:focus-visible {
+    background: var(--yellow) !important;
+    border-color: rgba(255, 246, 234, 0.2) !important;
   }
 
   .products-sidebar-card h2,
