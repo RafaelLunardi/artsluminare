@@ -574,11 +574,11 @@ h3 {
 .products-sidebar-card {
   display: grid;
   gap: 1rem;
-  padding: 1.2rem;
+  padding: 1.3rem;
   border: 4px solid var(--black);
-  border-radius: var(--radius);
-  background: var(--white);
-  box-shadow: 8px 8px 0 var(--black);
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fffaf1 0%, #ffffff 100%);
+  box-shadow: 10px 10px 0 rgba(16, 16, 16, 0.96);
 }
 
 .products-sidebar-card h2 {
@@ -587,7 +587,7 @@ h3 {
 
 .products-sidebar-filters {
   display: grid;
-  gap: 0.55rem;
+  gap: 0.65rem;
 }
 
 .products-filter-toggle {
@@ -598,6 +598,7 @@ h3 {
   width: 100%;
   justify-content: flex-start;
   text-align: left;
+  border-radius: 12px;
 }
 
 .products-content {
@@ -622,20 +623,50 @@ h3 {
 
 .filter-chip {
   min-height: 42px;
-  padding: 0.65rem 0.85rem;
+  padding: 0.72rem 0.95rem;
   border: 3px solid var(--black);
-  border-radius: var(--radius);
+  border-radius: 12px;
   background: var(--white);
   color: var(--black);
   font-size: 0.78rem;
   font-weight: 1000;
   text-transform: uppercase;
   cursor: pointer;
+  box-shadow: 4px 4px 0 rgba(16, 16, 16, 0.14);
+  transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease, color 140ms ease;
 }
 
 .filter-chip.is-active {
-  background: var(--black);
-  color: var(--white);
+  background: var(--yellow);
+  color: var(--black);
+  box-shadow: 4px 4px 0 rgba(255, 111, 97, 0.55);
+}
+
+.filter-chip:hover,
+.filter-chip:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 5px 5px 0 rgba(16, 16, 16, 0.18);
+  outline: none;
+}
+
+html[data-theme="dark"] .products-sidebar-card {
+  background: linear-gradient(180deg, #1d1819 0%, #120f10 100%);
+  border-color: rgba(255, 246, 234, 0.22);
+  box-shadow: 10px 10px 0 rgba(255, 246, 234, 0.08);
+}
+
+html[data-theme="dark"] .products-sidebar-filters .filter-chip {
+  background: #181314;
+  color: #fff6ea;
+  border-color: rgba(255, 246, 234, 0.22);
+  box-shadow: none;
+}
+
+html[data-theme="dark"] .products-sidebar-filters .filter-chip.is-active {
+  background: var(--yellow);
+  color: var(--black);
+  border-color: rgba(255, 246, 234, 0.2);
+  box-shadow: 4px 4px 0 rgba(255, 159, 199, 0.24);
 }
 
 .product-grid {
