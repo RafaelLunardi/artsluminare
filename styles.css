@@ -890,6 +890,12 @@ html[data-theme="dark"] .products-sidebar-filters .filter-chip.is-active {
   font-weight: 1000;
 }
 
+html[data-theme="dark"] .sales-card span {
+  background: #fff6ea;
+  color: var(--black);
+  border-color: rgba(16, 16, 16, 0.92);
+}
+
 .sales-card h3 {
   font-size: clamp(1.45rem, 2vw, 2.05rem);
 }
