@@ -1111,12 +1111,23 @@ select:focus-visible {
   }
 
   .hero-copy {
+    width: 100%;
+    padding: 0.7rem 0.75rem 0.15rem;
+    background: var(--paper);
+    border-bottom: 0;
+  }
+
+  .hero-copy h1,
+  .hero-copy p:not(.eyebrow),
+  .hero-copy .eyebrow {
     display: none;
   }
 
   .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 0.45rem;
-    margin-top: 0.85rem;
+    margin-top: 0;
   }
 
   .button {
