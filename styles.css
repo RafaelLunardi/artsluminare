@@ -146,18 +146,19 @@ select {
   position: relative;
   display: inline-block;
   font-style: normal;
+  line-height: 1;
 }
 
 .pink-i::after {
   content: "";
   position: absolute;
   left: 50%;
-  top: 0.02em;
-  width: 0.28em;
-  height: 0.28em;
+  top: 0.14em;
+  width: 0.24em;
+  height: 0.24em;
   border-radius: 50%;
   background: var(--pink);
-  transform: translate(-50%, -72%);
+  transform: translate(-50%, 0);
   pointer-events: none;
 }
 
