@@ -1422,6 +1422,12 @@ select:focus-visible {
     background: var(--white);
   }
 
+  .products-sidebar-filters .filter-chip.is-active {
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--black);
+  }
+
   .products-sidebar-card h2,
   .products-content-head .eyebrow,
   .contact-copy .eyebrow,
