@@ -441,6 +441,10 @@ h3 {
   box-shadow: 14px 14px 0 var(--black);
 }
 
+.mobile-quick-actions {
+  display: none;
+}
+
 .order-badge {
   position: absolute;
   right: clamp(1rem, 5vw, 5rem);
@@ -1128,6 +1132,18 @@ select:focus-visible {
     grid-template-columns: 1fr 1fr;
     gap: 0.45rem;
     margin-top: 0;
+  }
+
+  .hero-actions {
+    display: none;
+  }
+
+  .mobile-quick-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.45rem;
+    padding: 0.7rem 0.75rem 0.15rem;
+    background: var(--paper);
   }
 
   .button {
