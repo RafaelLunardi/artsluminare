@@ -1419,13 +1419,20 @@ select:focus-visible {
     line-height: 1;
     border-width: 2px;
     border-radius: 10px;
-    background: var(--white);
+    background: var(--white) !important;
+    color: var(--black) !important;
+    border-color: var(--black) !important;
   }
 
   .products-sidebar-filters .filter-chip.is-active {
-    background: var(--black);
-    color: var(--white);
-    border-color: var(--black);
+    background: var(--yellow) !important;
+    color: var(--black) !important;
+    border-color: var(--black) !important;
+  }
+
+  html[data-theme="dark"] .products-sidebar-filters .filter-chip,
+  html[data-theme="dark"] .products-sidebar-filters .filter-chip.is-active {
+    color: var(--black) !important;
   }
 
   .products-sidebar-card h2,
