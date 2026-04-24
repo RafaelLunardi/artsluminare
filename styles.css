@@ -1400,14 +1400,14 @@ select:focus-visible {
   }
 
   .products-sidebar-filters {
-    display: none;
+    display: none !important;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.5rem;
     margin-top: 0.6rem;
   }
 
   .products-sidebar-filters.is-open {
-    display: grid;
+    display: grid !important;
   }
 
   .products-sidebar-filters .filter-chip {
