@@ -1207,9 +1207,9 @@ select:focus-visible {
   }
 
   .product-info {
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto auto auto;
     gap: 0.28rem;
-    min-height: 156px;
+    min-height: 132px;
     padding: 0.68rem;
   }
 
@@ -1219,8 +1219,7 @@ select:focus-visible {
   }
 
   .product-copy {
-    font-size: 0.72rem;
-    line-height: 1.28;
+    display: none;
   }
 
   .product-info div {
@@ -1342,8 +1341,14 @@ select:focus-visible {
     line-height: 1.35;
   }
 
+  .page-intro .section-copy,
+  .products-sidebar-card .section-copy,
+  .products-hero-cards {
+    display: none;
+  }
+
   .products-page-section {
-    padding-top: 1.2rem;
+    padding-top: 0.9rem;
   }
 
   .products-sidebar-card {
@@ -1355,6 +1360,17 @@ select:focus-visible {
 
   .products-content-head {
     margin-bottom: 0.55rem;
+  }
+
+  .category-section,
+  #inspiracoes,
+  .story-band,
+  .sales-section {
+    display: none;
+  }
+
+  .store-section {
+    border-top-width: 0;
   }
 
   html[data-theme="dark"] .hero {
