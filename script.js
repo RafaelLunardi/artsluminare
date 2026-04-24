@@ -50,9 +50,6 @@ function applyFilter(filter) {
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     applyFilter(button.dataset.filter);
-    if (window.matchMedia("(max-width: 620px)").matches) {
-      setProductsFilterOpen(false);
-    }
   });
 });
 
