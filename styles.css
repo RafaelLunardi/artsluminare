@@ -1421,18 +1421,23 @@ select:focus-visible {
     border-radius: 10px;
     background: var(--white) !important;
     color: var(--black) !important;
+    -webkit-text-fill-color: var(--black) !important;
     border-color: var(--black) !important;
   }
 
-  .products-sidebar-filters .filter-chip.is-active {
+  .products-sidebar-filters .filter-chip.is-active,
+  .products-sidebar-filters .filter-chip[aria-pressed="true"] {
     background: var(--yellow) !important;
     color: var(--black) !important;
+    -webkit-text-fill-color: var(--black) !important;
     border-color: var(--black) !important;
   }
 
   html[data-theme="dark"] .products-sidebar-filters .filter-chip,
-  html[data-theme="dark"] .products-sidebar-filters .filter-chip.is-active {
+  html[data-theme="dark"] .products-sidebar-filters .filter-chip.is-active,
+  html[data-theme="dark"] .products-sidebar-filters .filter-chip[aria-pressed="true"] {
     color: var(--black) !important;
+    -webkit-text-fill-color: var(--black) !important;
   }
 
   .products-sidebar-card h2,
