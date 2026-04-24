@@ -1111,17 +1111,6 @@ select:focus-visible {
   }
 
   .hero-copy {
-    width: 100%;
-    padding: 1.4rem 0.9rem 1rem;
-    background: var(--yellow);
-    border-bottom: 4px solid var(--black);
-  }
-
-  .hero-copy p:not(.eyebrow) {
-    display: none;
-  }
-
-  .hero-copy .eyebrow {
     display: none;
   }
 
