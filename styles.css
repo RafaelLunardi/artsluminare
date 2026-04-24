@@ -418,6 +418,10 @@ h3 {
   background: var(--yellow);
 }
 
+.button-mint {
+  background: var(--mint);
+}
+
 .hero-stage {
   position: relative;
   align-self: stretch;
@@ -1140,9 +1144,10 @@ select:focus-visible {
 
   .mobile-quick-actions {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.45rem;
-    padding: 0.7rem 0.75rem 0.15rem;
+    grid-template-columns: repeat(2, minmax(0, 144px));
+    justify-content: center;
+    gap: 0.55rem;
+    padding: 1rem 0.75rem 0.35rem;
     background: var(--paper);
   }
 
