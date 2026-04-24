@@ -1144,10 +1144,11 @@ select:focus-visible {
 
   .mobile-quick-actions {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 144px));
-    justify-content: center;
+    width: fit-content;
+    grid-template-columns: repeat(2, minmax(0, 138px));
     gap: 0.55rem;
-    padding: 1rem 0.75rem 0.35rem;
+    margin: 0.85rem auto 0.45rem;
+    padding: 0;
     background: var(--paper);
   }
 
