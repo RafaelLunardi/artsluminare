@@ -713,6 +713,14 @@ html[data-theme="dark"] .products-sidebar-filters .filter-chip.is-active {
   box-shadow: 10px 10px 0 var(--black);
 }
 
+.empty-state-card .status {
+  position: static;
+  top: auto;
+  left: auto;
+  width: fit-content;
+  margin: 0;
+}
+
 .empty-state-card h3 {
   margin: 0;
   font-size: clamp(1.4rem, 2vw, 2rem);
