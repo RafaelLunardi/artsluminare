@@ -460,8 +460,9 @@ h3 {
 
 .hero-stage img {
   width: min(100%, 780px);
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  background: #ffffff;
   border: 4px solid var(--black);
   border-radius: var(--radius);
   box-shadow: 14px 14px 0 var(--black);
@@ -1235,8 +1236,10 @@ select:focus-visible {
   }
 
   .hero-stage img {
-    aspect-ratio: 1.18 / 1;
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
     object-position: center;
+    background: #ffffff;
     border-width: 3px;
     box-shadow: none;
   }
