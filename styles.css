@@ -319,6 +319,27 @@ html[data-theme="dark"] .store-card {
   box-shadow: 7px 7px 0 rgba(255, 246, 234, 0.1);
 }
 
+html[data-theme="dark"] .empty-state-card {
+  background: linear-gradient(135deg, #2b211e 0%, #3a2b21 100%);
+  border-color: rgba(255, 246, 234, 0.22);
+  box-shadow: 10px 10px 0 rgba(255, 246, 234, 0.08);
+}
+
+html[data-theme="dark"] .empty-state-card h3 {
+  color: #fff6ea;
+}
+
+html[data-theme="dark"] .empty-state-card p {
+  color: rgba(255, 246, 234, 0.82);
+}
+
+html[data-theme="dark"] .empty-state-card .status.quote {
+  background: var(--yellow);
+  color: var(--black);
+  border-color: var(--black);
+  box-shadow: 3px 3px 0 var(--black);
+}
+
 .nav-toggle {
   display: none;
   width: 46px;
