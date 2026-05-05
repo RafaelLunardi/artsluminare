@@ -1725,6 +1725,20 @@ html[data-theme="dark"] .shop-modal-close:focus-visible {
   min-height: 140px;
 }
 
+.shop-modal-grid .store-card span {
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+
+.shop-modal-grid .store-card strong {
+  font-family: "Inter", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.3;
+  max-width: none;
+  opacity: 0.72;
+}
+
 .store-card.coral {
   background: var(--coral);
   color: var(--white);
