@@ -1632,6 +1632,122 @@ select:focus-visible {
   }
 }
 
+/* Shop modal */
+.shop-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(16, 16, 16, 0.72);
+  backdrop-filter: blur(4px);
+}
+
+.shop-modal-overlay[hidden] {
+  display: none;
+}
+
+body.is-modal-open {
+  overflow: hidden;
+}
+
+.shop-modal {
+  width: min(100%, 540px);
+  padding: clamp(1.2rem, 3vw, 1.8rem);
+  border: 4px solid var(--black);
+  border-radius: var(--radius);
+  background: var(--paper);
+  box-shadow: 10px 10px 0 var(--black);
+  display: grid;
+  gap: 1.2rem;
+}
+
+html[data-theme="dark"] .shop-modal {
+  box-shadow: 10px 10px 0 rgba(255, 246, 234, 0.12);
+}
+
+.shop-modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.shop-modal h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1;
+  margin-top: 0.3rem;
+}
+
+.shop-modal-close {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 3px solid var(--black);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--ink);
+  font-size: 1.1rem;
+  font-weight: 1000;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--black);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.shop-modal-close:hover,
+.shop-modal-close:focus-visible {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--black);
+  outline: none;
+}
+
+html[data-theme="dark"] .shop-modal-close {
+  border-color: rgba(255, 246, 234, 0.3);
+  box-shadow: 3px 3px 0 rgba(255, 246, 234, 0.12);
+}
+
+html[data-theme="dark"] .shop-modal-close:hover,
+html[data-theme="dark"] .shop-modal-close:focus-visible {
+  box-shadow: 1px 1px 0 rgba(255, 246, 234, 0.12);
+}
+
+.shop-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.shop-modal-grid .store-card {
+  min-height: 140px;
+}
+
+.store-card.coral {
+  background: var(--coral);
+  color: var(--white);
+}
+
+@media (max-width: 480px) {
+  .shop-modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-modal-grid .store-card {
+    min-height: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1rem;
+  }
+
+  .shop-modal-grid .store-card strong {
+    font-size: 1rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

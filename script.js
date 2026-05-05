@@ -96,3 +96,38 @@ if (initialFilter && [...filterButtons].some((button) => button.dataset.filter =
 if (year) {
   year.textContent = new Date().getFullYear();
 }
+
+const shopModal = document.getElementById("shop-modal");
+const shopModalProductName = document.getElementById("shop-modal-product-name");
+const shopModalClose = document.querySelector(".shop-modal-close");
+
+function openShopModal(productName) {
+  if (!shopModal) return;
+  if (shopModalProductName) shopModalProductName.textContent = productName || "Produto";
+  shopModal.hidden = false;
+  document.body.classList.add("is-modal-open");
+  shopModalClose?.focus();
+}
+
+function closeShopModal() {
+  if (!shopModal) return;
+  shopModal.hidden = true;
+  document.body.classList.remove("is-modal-open");
+}
+
+document.querySelectorAll(".product-link").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const name = link.querySelector("h3")?.textContent?.trim();
+    openShopModal(name);
+  });
+});
+
+shopModalClose?.addEventListener("click", closeShopModal);
+shopModal?.addEventListener("click", (e) => {
+  if (e.target === shopModal) closeShopModal();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && shopModal && !shopModal.hidden) closeShopModal();
+});

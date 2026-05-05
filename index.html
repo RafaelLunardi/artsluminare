@@ -67,7 +67,7 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=2" />
+    <link rel="stylesheet" href="./styles.css?v=3" />
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -346,6 +346,31 @@
           </a>
         </div>
       </section>
+      <div class="shop-modal-overlay" id="shop-modal" role="dialog" aria-modal="true" aria-labelledby="shop-modal-heading" hidden>
+        <div class="shop-modal">
+          <div class="shop-modal-head">
+            <div>
+              <p class="eyebrow" id="shop-modal-product-name">Produto</p>
+              <h2 id="shop-modal-heading">Onde comprar?</h2>
+            </div>
+            <button class="shop-modal-close" type="button" aria-label="Fechar">&#x00D7;</button>
+          </div>
+          <div class="shop-modal-grid">
+            <a class="store-card yellow" href="https://www.mercadolivre.com.br/" target="_blank" rel="noreferrer noopener" aria-label="Comprar no Mercado Livre">
+              <span>Mercado Livre</span>
+              <strong>Ir para a loja</strong>
+            </a>
+            <a class="store-card mint" href="https://www.elo7.com.br/" target="_blank" rel="noreferrer noopener" aria-label="Comprar no Elo7">
+              <span>Elo7</span>
+              <strong>Ir para a loja</strong>
+            </a>
+            <a class="store-card coral" href="https://shopee.com.br/" target="_blank" rel="noreferrer noopener" aria-label="Comprar na Shopee">
+              <span>Shopee</span>
+              <strong>Ir para a loja</strong>
+            </a>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="site-footer">
@@ -356,6 +381,6 @@
       <p>&copy; <span id="year"></span> ArtsLum<span class="pink-i">&#305;</span>nare. Amigurumis artesanais prontos e sob encomenda.</p>
     </footer>
 
-    <script src="./script.js?v=2"></script>
+    <script src="./script.js?v=3"></script>
   </body>
 </html>
