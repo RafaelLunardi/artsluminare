@@ -99,11 +99,13 @@ if (year) {
 
 const shopModal = document.getElementById("shop-modal");
 const shopModalProductName = document.getElementById("shop-modal-product-name");
+const shopModalMlLink = document.getElementById("shop-modal-ml-link");
 const shopModalClose = document.querySelector(".shop-modal-close");
 
-function openShopModal(productName) {
+function openShopModal(productName, mlUrl) {
   if (!shopModal) return;
   if (shopModalProductName) shopModalProductName.textContent = productName || "Produto";
+  if (shopModalMlLink) shopModalMlLink.href = mlUrl || "https://www.mercadolivre.com.br/";
   shopModal.hidden = false;
   document.body.classList.add("is-modal-open");
   shopModalClose?.focus();
@@ -119,7 +121,8 @@ document.querySelectorAll(".product-link").forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
     const name = link.querySelector("h3")?.textContent?.trim();
-    openShopModal(name);
+    const mlUrl = link.dataset.mlUrl;
+    openShopModal(name, mlUrl);
   });
 });
 
